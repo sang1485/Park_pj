@@ -13,13 +13,21 @@ int main(void)
 {
     PORTD = 0xff;  // master branch
 	DDRD = 0xff;
+	
+	int i;
 	/* Replace with your application code */
     while (1) 
     {
-		PORTD = 0x00;
-		_delay_ms(500);
-		PORTD = 0xff;
-		_delay_ms(500);
-    }
+		for (i=0; i<7; i++)
+		{
+			PORTD = ~(0x01 << i);
+			_delay_ms(500);
+		}
+		for (i=0; i<7; i++)
+		{
+			PORTD = ~(0x80 >> i);
+			_delay_ms(500);
+		}
+	}
 }
 
