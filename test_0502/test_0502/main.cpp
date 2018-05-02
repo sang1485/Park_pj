@@ -11,7 +11,7 @@
 
 int main(void)
 {
-    PORTD = 0xff;
+    PORTD = 0xff;// shift branch 
 	DDRD = 0xff;
 	
 	int i;
