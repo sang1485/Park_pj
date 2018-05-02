@@ -11,7 +11,7 @@
 
 int main(void)
 {
-    PORTD = 0xff;
+    PORTD = 0xff;  // master branch
 	DDRD = 0xff;
 	/* Replace with your application code */
     while (1) 
